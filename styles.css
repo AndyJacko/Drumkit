@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#playground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  z-index: -100;
+}
+
+#content {
+  height: 100%;
+  background: #00000033;
+  z-index: 100;
+}
+
+h1 {
+  padding: 10px 0;
+}
+
+#keys-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keys-box {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#drums-container {
+  margin: 20px;
+  padding: 20px;
+}

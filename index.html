@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drumkit</title>
+  </head>
+  <body>
+    <canvas id="playground"> </canvas>
+
+    <div id="content">
+      <h1>Welcome To Drum Spectacular</h1>
+
+      <div id="keys-container">
+        <div class="keys-box">
+          <div class="key-header">A</div>
+          <div class="key-sound">Boom</div>
+          <audio id="boom" src="./sounds/boom.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">S</div>
+          <div class="key-sound">Clap</div>
+          <audio id="clap" src="./sounds/clap.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">D</div>
+          <div class="key-sound">Hi-Hat</div>
+          <audio id="hi-hat" src="./sounds/hihat.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">F</div>
+          <div class="key-sound">Kick</div>
+          <audio id="kick" src="./sounds/kick.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">G</div>
+          <div class="key-sound">Open-Hat</div>
+          <audio id="open-hat" src="./sounds/openhat.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">H</div>
+          <div class="key-sound">Ride</div>
+          <audio id="ride" src="./sounds/ride.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">J</div>
+          <div class="key-sound">Snare</div>
+          <audio id="snare" src="./sounds/snare.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">K</div>
+          <div class="key-sound">Tink</div>
+          <audio id="tink" src="./sounds/tink.wav"></audio>
+        </div>
+        <div class="keys-box">
+          <div class="key-header">L</div>
+          <div class="key-sound">Tom</div>
+          <audio id="tom" src="./sounds/tom.wav"></audio>
+        </div>
+      </div>
+
+      <div id="drums-container">drums</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
