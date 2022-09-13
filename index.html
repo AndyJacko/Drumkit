@@ -7,62 +7,81 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Drumtacular</title>
   </head>
+  <!-- <body onload="playIntro()"> -->
   <body>
     <canvas id="playground"> </canvas>
 
     <div id="content">
-      <h1>Welcome To Drumtacular</h1>
+      <h1 onClick="playIntro()">Drumtacular</h1>
+      <audio id="intro" src="./sounds/intro.wav"></audio>
+      
+      <div>Press Keys Make Sounds</div>
 
       <div id="keys-container">
-        <div class="keys-box">
+        <div class="keys-box" onClick="playSound('a')">
           <div class="key-header">A</div>
           <div class="key-sound">Boom</div>
           <audio id="boom" src="./sounds/boom.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('s')">
           <div class="key-header">S</div>
           <div class="key-sound">Clap</div>
           <audio id="clap" src="./sounds/clap.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('d')">
           <div class="key-header">D</div>
           <div class="key-sound">Hi-Hat</div>
           <audio id="hi-hat" src="./sounds/hihat.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('f')">
           <div class="key-header">F</div>
           <div class="key-sound">Kick</div>
           <audio id="kick" src="./sounds/kick.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('g')">
           <div class="key-header">G</div>
           <div class="key-sound">Open-Hat</div>
           <audio id="open-hat" src="./sounds/openhat.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('h')">
           <div class="key-header">H</div>
           <div class="key-sound">Ride</div>
           <audio id="ride" src="./sounds/ride.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('j')">
           <div class="key-header">J</div>
           <div class="key-sound">Snare</div>
           <audio id="snare" src="./sounds/snare.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('k')">
           <div class="key-header">K</div>
           <div class="key-sound">Tink</div>
           <audio id="tink" src="./sounds/tink.wav"></audio>
         </div>
-        <div class="keys-box">
+
+        <div class="keys-box" onClick="playSound('l')">
           <div class="key-header">L</div>
           <div class="key-sound">Tom</div>
           <audio id="tom" src="./sounds/tom.wav"></audio>
         </div>
       </div>
 
-      <div id="drums-container"><img src="images/drums.png" alt="Drums" /></div>
-      <div id="reset-instructions">Press "Escape" to reset the canvas :)</div>
+      <div id="reset-instructions">"Escape" Resets Background :)</div>
+
+      <div id="drums-container">
+        <img id="drums" src="images/drums.png" alt="Drums" onClick="badumtss()" />
+        <audio id="badumtss" src="./sounds/badumtss.wav"></audio>
+      </div>
+
+      <img id="made-by" onClick="easteregg()" src="images/andyjacko.png" alt="Andy Jacko" />
+      <audio id="easteregg" src="./sounds/easteregg.wav"></audio>
     </div>
     <script src="script.js"></script>
   </body>
