@@ -18,53 +18,41 @@ canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 
 const drawCircle = (fill, border) => {
-  ctx.beginPath();
-  ctx.arc(
-    Math.ceil(Math.random() * canvas.width),
-    Math.ceil(Math.random() * canvas.height),
-    Math.ceil(Math.random() * 150),
-    0,
-    2 * Math.PI,
-    false
-  );
-  ctx.fillStyle = fill;
-  ctx.fill();
-  ctx.lineWidth = 1;
-  ctx.strokeStyle = border;
-  ctx.stroke();
+  const x = Math.ceil(Math.random() * canvas.width);
+  const y = Math.ceil(Math.random() * canvas.height);
+  let size = Math.ceil(Math.random() * 150);
+  let i = 0;
+
+  setInterval(() => {
+    if (i < size) {
+      ctx.beginPath();
+      ctx.arc(x, y, i, 0, 2 * Math.PI, false);
+      ctx.fillStyle = fill;
+      ctx.fill();
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = border;
+      ctx.stroke();
+      i++;
+    }
+  }, 1);
 };
 
 const drawSquare = (fill, border) => {
   const posx = Math.ceil(Math.random() * canvas.width);
   const posy = Math.ceil(Math.random() * canvas.height);
-  const posw = Math.ceil(Math.random() * 150);
-  const posh = Math.ceil(Math.random() * 150);
+  let size = Math.ceil(Math.random() * 150);
+  let i = 0;
 
-  ctx.fillStyle = fill;
-  ctx.fillRect(posx, posy, posw, posh);
-  ctx.strokeStyle = border;
-  ctx.strokeRect(posx, posy, posw, posh);
-};
-
-const drawTriangle = (fill, border) => {
-  console.log("draw triangle");
-  const pos1x = Math.ceil(Math.random() * canvas.width);
-  const pos1y = Math.ceil(Math.random() * canvas.height);
-  const pos2x = Math.ceil(Math.random() * canvas.width);
-  const pos2y = Math.ceil(Math.random() * canvas.height);
-  const pos3x = Math.ceil(Math.random() * canvas.width);
-  const pos3y = Math.ceil(Math.random() * canvas.height);
-
-  ctx.beginPath();
-  ctx.moveTo(pos1x, pos1y);
-  ctx.lineTo(pos2x, pos2y);
-  ctx.lineTo(pos3x, pos3y);
-  ctx.closePath();
-  ctx.lineWidth = 1;
-  ctx.strokeStyle = border;
-  ctx.stroke();
-  ctx.fillStyle = fill;
-  ctx.fill();
+  setInterval(() => {
+    if (i < size) {
+      ctx.beginPath();
+      ctx.fillStyle = fill;
+      ctx.fillRect(posx, posy, i, i);
+      ctx.strokeStyle = border;
+      ctx.strokeRect(posx, posy, i, i);
+      i++;
+    }
+  }, 1);
 };
 
 const drawShape = () => {
@@ -104,7 +92,7 @@ const drawShape = () => {
     "OliveDrab",
     "Orchid",
   ];
-  const randomNum = Math.ceil(Math.random() * 3);
+  const randomNum = Math.ceil(Math.random() * 2);
   const fill = colours[Math.floor(Math.random() * colours.length)];
   const border = colours[Math.floor(Math.random() * colours.length)];
 
@@ -114,9 +102,6 @@ const drawShape = () => {
       break;
     case 2:
       drawSquare(fill, border);
-      break;
-    case 3:
-      drawTriangle(fill, border);
       break;
   }
 };
